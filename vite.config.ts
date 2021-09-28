@@ -2,6 +2,7 @@ import { UserConfigExport } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import Pages from "vite-plugin-pages";
 import devcert from "devcert";
+import checker from 'vite-plugin-checker'
 
 // https://vitejs.dev/config/
 export default async (): Promise<UserConfigExport> => {
@@ -15,6 +16,7 @@ export default async (): Promise<UserConfigExport> => {
         extensions: ["tsx"],
         react: true,
       }),
+      checker({ typescript: true })
     ],
     server: {
       port: 8080,
