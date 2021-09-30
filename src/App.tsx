@@ -4,6 +4,11 @@ import "./App.css";
 import { environmentState } from "./recoil/atoms/environmentState";
 import { useRecoilState } from "recoil";
 
+const hoge = `
+  minify test
+`
+const hoge2 = `minify test2`
+
 export const App : VFC = () => {
   const [count, setCount] = useState(0);
   const [environment, setEnvironment] = useRecoilState(environmentState);
@@ -19,7 +24,7 @@ export const App : VFC = () => {
           </button>
         </p>
         <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
+          Edit <code>{hoge2}{hoge}</code> and save to test HMR updates.
         </p>
         <p>
           <a
