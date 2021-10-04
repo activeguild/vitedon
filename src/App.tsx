@@ -13,6 +13,14 @@ export const App : VFC = () => {
   const [count, setCount] = useState(0);
   const [environment, setEnvironment] = useRecoilState(environmentState);
 
+
+  const json = {
+    foo: 'bar'
+  }
+
+  const jsonStr = JSON.stringify(json);
+  const jsonObj = JSON.parse(jsonStr);
+
   return (
     <div className="App">
       <header className="App-header">
