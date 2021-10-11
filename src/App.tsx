@@ -3,6 +3,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import { environmentState } from "./recoil/atoms/environmentState";
 import { useRecoilState } from "recoil";
+import Index from './pages/index';
+// import style from "./index.module.scss";
+// import { classNamesFunc } from "classnames-generics";
+
+// const classNames = classNamesFunc<keyof typeof style>();
 
 const hoge = `
   minify test
@@ -23,6 +28,7 @@ export const App : VFC = () => {
 
   return (
     <div className="App">
+      <Index />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
