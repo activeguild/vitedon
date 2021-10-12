@@ -8,7 +8,7 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default async (): Promise<UserConfigExport> => {
-  const { key, cert } = await devcert.certificateFor("localhost");
+  // const { key, cert } = await devcert.certificateFor("localhost");
 
   return {
     build:{
@@ -26,10 +26,10 @@ export default async (): Promise<UserConfigExport> => {
     ],
     server: {
       // port: 8080,
-      https: {
-        key,
-        cert,
-      },
+      // https: {
+      //   key,
+      //   cert,
+      // },
     },
   };
 };
